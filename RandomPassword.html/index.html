@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passwod Genarator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-[url(./images/bg.png)] bg-cover bg-no-repeat bg-center min-h-screen text-white font-sans">
+
+  <div class="m-[12%] rounded-2xl shadow-5xl w-full max-w-md">
+    <h1 class="text-3xl font-bold mb-6 text-center">Genarate A <br><span class="text-3xl text-indigo-600">RandomPassword</span></h1>    
+    <div id="display" class="width-full bg-red-500/50 p-8 rounded-2xl shadow-xl w-full max-w-md">
+        <div class="relative">
+            <input type="text" id="password" class="bg-white text-black focus:outline-none px-4 py-2 rounded-lg w-full" readonly/>
+            <i class="fa-solid fa-clone text-black absolute top-1 right-2 cursor-pointer bg-blue-500 hover:bg-blue-300 transition p-2 rounded-lg"></i>
+        </div>
+        <div class="flex justify-end">
+            <button id="Genarator" class="mt-6 bg-white text-indigo-600 px-4 py-2 rounded-lg hover:bg-gray-200 transition"><i class="fa-solid fa-bolt-lightning me-2"></i>Genarate</button>
+        </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

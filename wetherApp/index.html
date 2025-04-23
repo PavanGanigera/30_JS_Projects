@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="weather-container w-lg bg-linear-to-r from-cyan-500 to-blue-500 flex flex-col justify-center items-center p-5 rounded-[10px] shadow-md shadow-black/20">
+    <h1 class="text-3xl text-white font-bold">Weather App</h1>
+    <div class="search-cont flex justify-center items-center gap-4 mt-5">
+      <input type="text" id="cityInput" placeholder="Enter city name" class="bg-white px-4 py-3 focus:outline-none border border-gray-300 rounded-full px-4 py-2 w-[335px]"/>
+      <button id="search" class="bg-white px-4 py-3 hover:bg-gray-200 rounded-full transition duration-300 ease-in-out cursor-pointer">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div id="weatherResult" class="weather-result flex flex-col justify-center items-center mt-5">
+      <img src="/imges/Rain.png" alt="rain" class="weather-icon w-32 h-32 mt-5">
+      <h1 class="temp text-5xl font-semibold"> <span id="temp">22</span>°c</h1>
+      <h2 class="city text-2xl"><span id="city">Anantapur</span></h2>
+      <div class="details flex justify-between items-center w-[350px] mt-4">
+        <div class="flex gap-2 justify-center items-center">
+          <img src="/imges/humidity.png" alt="rain" class="humidity-icon w-15 h-15">
+          <div class="humidity-wing">
+            <p class="humidity"><span id="humidity">50%</span></p>
+            <p class="">humidity</p>
+          </div>
+        </div>
+        <div class="flex gap-2 justify-center items-center">
+          <img src="/imges/wind.png" alt="rain" class="wind-icon w-15 h-15">
+          <div class="wind-wing">
+            <p class="wind"><span id="wind">50 km/h</span></p>
+            <p class="">Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

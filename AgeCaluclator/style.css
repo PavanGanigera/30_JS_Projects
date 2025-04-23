@@ -1,0 +1,12 @@
+.dateContainer input::-webkit-calender-picker{
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    background-position: cover;
+    background-size: cover;
+    cursor: pointer;
+}
