@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-[url(./images/bg.png)] bg-cover bg-no-repeat bg-center">
+    <h1 class="title text-3xl mb-4 text-cyan-500 font-bold text-center">QR Generator</h1>
+  <div class="weather-container w-lg bg-linear-to-r from-cyan-500 to-blue-500  p-5 rounded-[10px] shadow-md shadow-black/20">
+    <div class="QR-Box mt-5 ">
+        <p class="title text-lg mb-4 font-bold text-center">Enter Your Text or URL</p>
+        <input type="text" id="QrText" placeholder="Enter text or link" class="bg-white text-black focus:outline-none px-4 py-2 rounded-lg w-full"/>
+        <div id="imgBox" class="flex items-center justify-center my-3">
+            <img src="" id="qrImage">
+        </div>
+        <button id="genQR" class=" bg-white text-blue-500 my-4 px-4 py-2 rounded-full hover:bg-#215f00-200 transition cursor-pointer"><i class="fa-solid fa-qrcode mr-2"></i>Generate QR</button>
+    </div>
+    <div class=" flex items-center justify-center gap-3 mt-5">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

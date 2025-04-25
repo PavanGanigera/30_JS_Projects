@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@utility dj {
+    @apply flex items-center justify-center;
+}
