@@ -26,16 +26,16 @@ async function getWeather() {
       let icon = document.querySelector('.weather-icon');
       
       if (data.weather[0].main === 'Clear') {
-        icon.src = '/imges/clear.png'
+        icon.src = './imges/clear.png'
       }
       if (data.weather[0].main === 'Rain') {
-        icon.src = '/imges/Rain.png'
+        icon.src = './imges/Rain.png'
       }
       if (data.weather[0].main === 'Drizzle') {
-        icon.src = '/imges/drizzele.png'
+        icon.src = './imges/drizzele.png'
       }
       if (data.weather[0].main === 'Mist') {
-        icon.src = '/imges/mist.png'
+        icon.src = './imges/mist.png'
       }
     } else {
       document.getElementById('weatherResult').innerHTML = `<p class="text-red-500">City not found</p>`;

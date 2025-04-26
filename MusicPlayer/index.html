@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body
+    class="bg-[url('./meadia/bg.png')] bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center text-white font-sans">
+
+    <div class="bg-white/10 backdrop-blur-md pt-4 pb-6 rounded-2xl shadow-xl w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-center">Music Player</h1>
+
+        <div id="container">
+            <div id="musicPlayer" class="flex items-center flex-col">
+                <nav class="flex  justify-between w-[350px] mt-4">
+                    <div class="text-black w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-amber-200 shadow-md"><i
+                            class="fa-solid fa-angle-left"></i></div>
+                    <div class="text-black w-10 h-10 cursor-pointer flex items-center justify-center rounded-full bg-amber-200 shadow-md"><i
+                            class="fa-solid fa-bars"></i></div>
+                </nav>
+                <div class="box-con flex flex-col items-center justify-center my-4 max-w-[350px] ">
+                    <img src="/MusicPlayer/meadia/Rocky.png" id="songImg" class="w-48 h-48 object-cover rounded-full border-8 shadow-xl shadow-amber-500/30" alt="rocky">
+                    <h1 class="text-3xl my-2 font-bold text-center">K.G.F</h1>
+                    <p class="text-center">The song "Toofan" from KGF Chapter 2 is a powerful track that captures the essence of the film's protagonist, Rocky. </p>
+
+                    <audio src="/MusicPlayer/meadia/Toofan.mp3" type="audio/mpeg" id="song"></audio>
+                    <input type="range" id="progressBar" value="0" min="0" max="100" class="w-full my-4 cursor-pointer bg-gray-300 rounded-lg h-2 appearance-none">
+    
+                </div>
+                <div class="flex items-center justify-center mt-4">
+                    <div class="flex items-center justify-between gap-x-6 max-w-[260px] w-full">
+                        <div class="text-black w-12 h-12 flex items-center justify-center cursor-pointer rounded-full bg-amber-200 shadow-md">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </div>
+                        <div  class="play text-black w-14 h-14 flex items-center justify-center cursor-pointer rounded-full bg-amber-200 shadow-md transition-transform scale-100 duration-200 hover:scale-150">
+                            <i class="fa-solid fa-play" id="playPauseIcon"></i>
+                        </div>
+                        <div class="text-black w-12 h-12 flex items-center justify-center cursor-pointer rounded-full bg-amber-200 shadow-md">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
