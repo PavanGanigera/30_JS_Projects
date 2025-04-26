@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.html" />
+
+</head>
+
+<body
+    class="bg-[url('./images/bg.png')] bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center text-white font-sans">
+
+    <div class="bg-white/10 backdrop-blur-md pt-4 pb-6 rounded-2xl shadow-xl w-full max-w-md">
+        <h1 class="text-3xl font-bold mb-6 text-center">Stop Watch</h1>
+
+        <div id="Container" class="flex items-center flex-col">
+            <div class="box-con flex flex-col items-center justify-center my-4 max-w-[350px] ">
+                <h1 id="display" class="text-3xl my-2 font-bold text-center text-black">00 : 00 : 14 : 00</h1>
+            </div>
+            <div class="flex items-center justify-center mt-4">
+                <div class="flex items-center justify-between gap-x-6 max-w-[260px] w-full">
+                    <div
+                      id="stop"  class="text-black w-12 h-12 flex items-center justify-center cursor-pointer rounded-full bg-white shadow-md">
+                        <i class="fa-solid fa-circle-stop"></i>
+                    </div>
+                    <div id="StartStop"
+                        class="play text-black w-14 h-14 flex items-center justify-center cursor-pointer rounded-full bg-white shadow-md">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div
+                    id="reset" class="text-black w-12 h-12 flex items-center justify-center cursor-pointer rounded-full bg-white shadow-md">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
