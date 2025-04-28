@@ -2,6 +2,7 @@ let display = document.getElementById('display');
 let startStopBtn = document.getElementById('StartStop');
 let resetBtn = document.getElementById('reset');
 let stopBtn = document.getElementById('stop');
+const playPauseIcon = document.querySelector('.icon');
 
 let timer = null;
 let milliseconds = 0;
@@ -35,22 +36,25 @@ function startStopwatch() {
     updateDisplay();
 }
 
-startStopBtn.addEventListener('click', function() {
-    if (!running) {
-        timer = setInterval(startStopwatch, 10); // update every 10ms
-        running = true;
-    } else {
+startStopBtn.addEventListener('click', function () {
+    if (running) {
         clearInterval(timer);
-        running = false;
+    } else {
+        timer = setInterval(startStopwatch, 10); // update every 10ms
     }
+    // Toggle play/pause icon
+    running = !running;
+
+    playPauseIcon.classList.toggle('fa-play');
+    playPauseIcon.classList.toggle('fa-pause');
 });
 
-stopBtn.addEventListener('click', function() {
+stopBtn.addEventListener('click', function () {
     clearInterval(timer);
     running = false;
 });
 
-resetBtn.addEventListener('click', function() {
+resetBtn.addEventListener('click', function () {
     clearInterval(timer);
     running = false;
     milliseconds = 0;
