@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alarm Clock with Toasts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('./meadia/bg.png')] bg-cover bg-no-repeat bg-center flex items-center justify-center min-h-screen bg-gray-100">
+
+  <div class="text-center space-y-6 bg-black/30 backdrop-blur-md p-8 rounded-md">
+    <h1 class="text-3xl text-white font-bold">Alarm Clock</h1>
+    <div id="timeDisplay" class="text-4xl font-mono text-white"></div>
+
+    <div class="space-y-3">
+      <input type="time" id="alarmTime" class="border px-4 py-2 rounded">
+      <div class="flex gap-4 justify-center">
+        <button id="setAlarm" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">Set Alarm</button>
+        <button id="clearAlarm" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded">Clear Alarm</button>
+      </div>
+    </div>
+
+    <!-- Hidden Modal for Alarm Ringing -->
+
+    <div id="alarmModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold mb-4">⏰ Alarm Ringing!</h2>
+        <div class="flex justify-center gap-4">
+          <button id="stopAlarm" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Stop</button>
+          <button id="snoozeAlarm" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">Snooze (1 min)</button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="alarmSound" src="/Alaram/meadia/rooster.wav" preload="auto"></audio>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="fixed top-5 right-5 space-y-2 z-50"></div>
+
+  <script src="/Alaram/script.js"></script>
+</body>
+</html>
