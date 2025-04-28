@@ -52,6 +52,8 @@ startStopBtn.addEventListener('click', function () {
 stopBtn.addEventListener('click', function () {
     clearInterval(timer);
     running = false;
+    playPauseIcon.classList.add('fa-play');
+    playPauseIcon.classList.remove('fa-pause');
 });
 
 resetBtn.addEventListener('click', function () {
@@ -62,6 +64,8 @@ resetBtn.addEventListener('click', function () {
     minutes = 0;
     hours = 0;
     updateDisplay();
+    playPauseIcon.classList.add('fa-play');
+    playPauseIcon.classList.remove('fa-pause');
 });
 
 // Initial display
