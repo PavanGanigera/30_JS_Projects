@@ -1,0 +1,53 @@
+ .seat {
+     background-color: #444451;
+     height: 30px;
+     width: 30px;
+     margin: 5px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .seat.selected {
+     background-color: #6feaf6;
+ }
+
+ .seat.occupied {
+     background-color: #00ff00;
+     cursor: not-allowed;
+ }
+
+ .seat.booked {
+     background-color: white;
+     cursor: default;
+ }
+
+ .screen {
+     background-color: #fff;
+     height: 70px;
+     width: 500px;
+     border-radius: 8px;
+     margin: 20px 0;
+     transform: rotateX(-20deg);
+     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+ }
+
+ .screen::after {
+     content: '';
+     position: absolute;
+     bottom: -2px;
+     left: 0;
+     width: 100%;
+     height: 40px;
+     background: #212529;
+     border-top-left-radius: 100% 60px;
+     border-top-right-radius: 100% 60px;
+ }
+
+ .legend-item span {
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     border-radius: 5px;
+     margin-right: 5px;
+ }
