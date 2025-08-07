@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.form-control:focus {
+    border-color: orange;
+    box-shadow: none;
+}
+
+.action-btns .btn {
+    margin-right: 5px;
+}
+
+.copy-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}

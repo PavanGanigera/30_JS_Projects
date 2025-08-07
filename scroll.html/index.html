@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Watch Interaction</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .watch-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: url('/scroll.html/images/watch.png') center/cover no-repeat;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .watch-content {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            z-index: -1;
+            border-radius: 100px;
+            transform: scaleY(16px)!important;
+        }
+
+        .watch-content img {
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            transition: transform 0.2s ease;
+        }
+
+        .slider {
+            transform: rotate(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="watch-container">
+            <img src="images/watch.png" alt="Watch" style="width: 100%; height: 100%;">
+            <div class="watch-content" id="watchContent">
+                <img id="scrollImage" src="images/cont.jpg" alt="Scroll Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" id="rangeInput">
+    </div>
+
+    <script>
+        const rangeInput = document.getElementById("rangeInput");
+        const scrollImage = document.getElementById("scrollImage");
+
+        rangeInput.addEventListener("input", function () {
+            const offset = (this.value - 50) * 2; // Scroll up/down
+            scrollImage.style.transform = `translateY(${offset}px)`;
+        });
+    </script>
+</body>
+
+</html>
