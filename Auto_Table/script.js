@@ -20,6 +20,8 @@ function renderTable() {
       </tr>
     `;
   });
+
+  console.log("Table rendered with entries:", entries);
 }
 
 function copyToClipboard(text) {
